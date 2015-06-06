@@ -1,0 +1,241 @@
+/* === imports === */
+@import url(blocks.css);
+@import url(blocks-system.css);
+@import url(content-data.css);
+@import url(content.css);
+@import url(forms.css);
+@import url(news.css);
+
+/* === Reset === */
+* {
+font-size:1em;
+font-family:sans-serif;
+text-decoration:none;
+margin:0;
+padding:0;
+}
+
+/* === Beginning of the applicable styles === */
+html,body {
+	margin-left:							auto;
+	margin-right:							auto;
+	background-attachment:			fixed;
+background: #639ace url(../img/fond-body.jpg) repeat-x top;
+color:#333;
+font-size:.8em;
+font-family:"Lucida Grande", Verdana, Arial, Sans-Serif;
+margin:0;
+padding-top:10px;
+}
+
+body.site_closed form {
+padding:1em 35%;
+}
+
+/* === body boxes === */
+#system,#news,#myalbum,#x_movie,#mylinks,#mydownloads,#myCredits,#liaise,#sitemap,#tellafriend {}
+#xo-wrapper {}
+#xo-bgstatic {}
+
+/* === Header box === */
+#xo-header {
+font-size:1em;
+margin:0;
+padding:0;
+}
+
+/* === Header elements === */
+#header-l {}
+#header-r {}
+
+#niftycorner {
+background-color: transparent;
+width:100%;
+height:198px;
+z-index:10;
+}
+#niftycorner b.rtop, #niftycorner b.rbottom{background-color: inherit;}
+#niftycorner b.rtop b, #niftycorner b.rbottom b{display:block;height: 1px;
+overflow: hidden; 
+background-color: 			#639ace;
+/*filter: alpha(opacity=90);     -moz-opacity: 0.9;     -khtml-opacity: 0.9;     opacity: 0.9;*/
+	}
+
+
+b.r1{margin: 0 3px;border-width: 0 2px}
+b.r2{margin: 0 2px}
+b.r3{margin: 0 1px}
+b.r4{height: 2px}
+b.rb1{margin: 0 8px;border-width:0 2px}
+b.rb2{margin: 0 6px;border-width:0 2px}
+b.rb3{margin: 0 5px}
+b.rb4{margin: 0 4px}
+
+#header-c{ 
+/*margin: 0 10%;background: #9BD1FA*/
+width:100%;
+height:194px;
+background:#639ace url(../img/fond-header.jpg) repeat-x bottom;
+/*filter: alpha(opacity=90);     -moz-opacity: 0.9;     -khtml-opacity: 0.9;     opacity: 0.9;*/
+z-index:							10;
+}
+
+#xo-banner {}
+
+#xo-banner-ad {
+position:absolute;
+top:90px;
+right:60px;
+z-index:12;
+}
+
+#xo-banner-ad object,#xo-banner-ad img {
+display:block;
+width: auto;
+}
+
+#xo-site-title {
+position:absolute;
+width:auto;
+top:75px;
+padding-left:150px;
+font-size:3.4em;
+font-weight:700;
+color:#fff;
+font-family:'Lucida Grande', Verdana, Arial, Sans-Serif;
+background-color:transparent;
+z-index:12;
+}
+
+#xo-site-title a {
+color:#fff;
+background-color:transparent;
+}
+
+a:hover#xo-site-title {
+background-color:transparent;
+color:#fff;
+}
+
+#xo-site-slogan {
+position:relative;
+padding-top:100px;
+padding-left:150px;
+font-size:2em;
+font-style:italic;
+color:#fff;
+z-index:11;
+}
+
+#xo-main-logo {
+position:absolute;
+width:auto;
+background-color:transparent;
+z-index:13;
+padding:50px 0 0 40px;
+}
+
+/* === Page box === */
+#xo-canvas {
+min-width:780px;
+margin:2px 20px;
+}
+
+#page-ml {
+/*background:#fff url("../img/ml.png") repeat-y left;*/
+margin:0;
+padding:0;
+}
+
+#page-mr {
+/*background:url("../img/mr.png") repeat-y right;*/
+margin:0;
+padding:0;
+}
+
+/* === Content zone === */
+#xo-canvas-content {
+/*background-color:#FFF;*/
+margin:0;
+}
+
+#xo-page {
+color:#333;
+padding:20px;
+background-color:#3676b0;
+}
+
+#xo-content {
+padding:20px;
+}
+
+/* === Footer === */
+#niftyfooter {
+/*background-color: transparent;*/
+width:100%;
+height:45px;
+z-index:10;
+}
+#niftyfooter b.rtop, #niftyfooter b.rbottom{background-color: inherit;}
+#niftyfooter b.rtop b{display:block;height: 1px;
+overflow: hidden; 
+background-color: 			#3676b0;
+filter: alpha(opacity=90);     -moz-opacity: 0.9;     -khtml-opacity: 0.9;     opacity: 0.9;
+	}
+
+#niftyfooter b.rbottom b{display:block;height: 1px;
+overflow: hidden; 
+background-color: #639ace;
+filter: alpha(opacity=90);     -moz-opacity: 0.9;     -khtml-opacity: 0.9;     opacity: 0.9;
+	}
+
+#footer-l {
+/*background:#eee url("../img/bl.png") no-repeat left;*/
+height:41px;
+margin:0;
+padding:0;
+}
+
+#footer-r {
+/*background:url("../img/br.png") no-repeat right;*/
+height:41px;
+margin:0;
+padding:0;
+}
+
+#footer-r p {
+text-align:center;
+margin:0;
+padding:20px 0 0;
+}
+
+.copyright {
+background-color:transparent;
+text-decoration:none;
+text-align:center;
+}
+
+.copyright a {
+margin-left:.3em!important;
+margin-right:.6em!important;
+}
+
+.footertable {
+/*width:98%!important;*/
+background:url(../img/fond-footer.png) repeat-x;
+color: #fff;
+}
+
+/* === Debug mode === */
+#xo-logger-output {
+font-size:.8em;
+padding-top:20px;
+}
+
+/* === back to the top link === */
+#xo-top {
+height:30px;
+background-color:#3676b0;
+color:#fff;
+border-bottom:1px solid #e8e8e8;
+}

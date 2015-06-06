@@ -1,0 +1,73 @@
+
+<script type="text/javascript">
+    Window.onDomReady(function(){
+        Window.disableImageCache();
+        $S('#popmenu li a').each(function(el) {    
+            var effect = el.effect('background-position', {duration: 500, wait: false, transition: fx.Transitions.circOut, fps: 50}).set(-150);
+            el.addEvent('mouseover', effect.goTo.pass(0, effect)).addEvent('mouseout', effect.goTo.pass(-150, effect));
+        });
+    });
+</script>
+<script type="text/javascript">
+    Window.onDomReady(function(){
+        Window.disableImageCache();
+        $S('#popmenu2 li a').each(function(el) {    
+            var effect = el.effect('background-position', {duration: 500, wait: false, transition: fx.Transitions.circOut, fps: 50}).set(-150);
+            el.addEvent('mouseover', effect.goTo.pass(0, effect)).addEvent('mouseout', effect.goTo.pass(-150, effect));
+        });
+    });
+</script>
+ <style type="text/css"> 
+#popmenu ul { list-style: none;
+list-style: none; 
+margin: 0; padding: 0;
+}
+#popmenu li { list-style: none; 
+display: block; width: 150px; 
+margin-bottom: 5px;
+}
+#popmenu a
+{ list-style: none; 
+display: block; color: #666; 
+text-decoration: none; padding: 5px 5px; 
+background: #3676b0 url(<{xoImgUrl /background.png}>) no-repeat -300px 0px;
+}
+#popmenu a:hover { list-style: none; 
+color: #c2c2c2;
+}
+#popmenu a span {list-style: none; 
+width: 150px;
+
+} 
+#popmenu2 ul { list-style: none; 
+list-style: none; 
+margin: 0; padding: 0; 
+}
+#popmenu2 li { list-style: none; 
+display: block; width: 150px; 
+margin-bottom: 5px;background: transparent;
+}
+#popmenu2 a
+{ list-style: none; 
+ color: #fff; 
+text-decoration: none; padding: 5px 15px; 
+background: #3676b0 url(<{xoImgUrl /background2.png}>) no-repeat -300px 0px;
+}
+#popmenu2 a:hover { list-style: none; 
+color: #e8e8e8;
+}
+#popmenu a span {list-style: none; 
+width: 150px;
+} 
+</style> 
+<div id="popmenu">				
+<li><a href="<{$xoops_url}>"><{$block.lang_home}></a></li>
+<{foreach item=module from=$block.modules}>
+<li><a href="<{$xoops_url}>/modules/<{$module.directory}>/"><{$module.name}></a></li>
+<span id="popmenu2">	
+<{foreach item=sublink from=$module.sublinks}>
+<li><a href="<{$sublink.url}>"><{$sublink.name}></a></li>
+<{/foreach}>
+</span>
+<{/foreach}> 
+</div>
